@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Tweet to Archive",
+  "version": "0.0",
+
+  "description": "View Twitter links without hassle by automatically redirecting all twitter.com or x.com links to the Internet Archive.",
+
+  "icons": {
+    "48": "icons/tweettoarchive-48.png",
+    "96": "icons/tweettoarchive-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.x.com/*", "*://*.twitter.com/*"],
+      "js": ["tweettoarchive.js"]
+    }
+  ]
+}
